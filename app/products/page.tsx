@@ -18,14 +18,14 @@ export default function ProductsPage() {
       </div>
       <div className="flex p-5 max-md:flex-col">
         <div className="w-1/3 p-10 max-md:w-full">
-          <Bounce left cascade delay={1000}>
-            <h1 className="mb-4 text-4xl text-start sm:text-4xl md:text-3xl font-bold flex-1">
+          <h1 className="mb-4 text-4xl text-start sm:text-4xl md:text-3xl font-bold flex-1">
+            <Bounce left cascade delay={1000}>
               <span>
                 Uncover the Next-Generation of products with cutting-edge
                 technology
               </span>
-            </h1>
-          </Bounce>
+            </Bounce>
+          </h1>
           <motion.div
             initial={{
               x: -200,
