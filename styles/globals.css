@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Default styles for unselected dots */
+.slick-dots li button:before {
+  color: white; /* Change to the color you want for unselected dots in the light theme */
+}
+
+/* Default styles for selected dots */
+.slick-dots li.slick-active button:before {
+  color: white; /* Make the selected dot white in the light theme */
+}
+
+/* Styles for unselected dots in the dark theme */
+.dark .slick-dots li button:before {
+  color: white; /* Change to the color you want for unselected dots in the dark theme */
+}
+
+/* Styles for selected dot in the dark theme */
+.dark .slick-dots li.slick-active button:before {
+  color: white; /* Make the selected dot white in the dark theme */
+}
+
+/* Styles for the arrows in the dark theme */
+.dark .slick-next:before,
+.dark .slick-prev:before {
+  color: white; /* Change to the color you want for arrows in the dark theme */
+}
+.light .slick-next:before,
+.light .slick-prev:before {
+  color: black; /* Change to the color you want for arrows in the dark theme */
+}
+.slick-list {
+  border-radius: 25px;
+}
+
