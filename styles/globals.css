@@ -38,4 +38,45 @@
 .slick-list {
   border-radius: 25px;
 }
+.dark .github {
+  color: white;
+}
+.light .github {
+  color: black;
+}
+.dark .linkedIn {
+  color: white;
+}
+.light .linkedIn {
+  color: black;
+}
 
+.dark .teamCard .social-link1:hover svg path {
+  fill: black;
+}
+.light .teamCard .social-link1:hover svg path {
+  fill: white;
+}
+
+.dark .teamCard .social-link1:hover {
+  border-radius: 25%;
+  background-color: white;
+  animation: bounce_613 0.5s linear;
+}
+.light .teamCard .social-link1:hover {
+  border-radius: 25%;
+  background-color: #000000;
+  animation: bounce_613 0.5s linear;
+}
+
+.teamCard .social-link2:hover svg path {
+  fill: #0072b1;
+}
+.teamCard .social-link2:hover {
+  border-radius: 25%;
+  background-color: white;
+  animation: bounce_613 0.5s linear;
+}
+.contactInput {
+  @apply outline-none bg-slate-400/10 rounded-sm border-b px-6 py-4 border-[#242424] text-gray-500 placeholder-gray-500 transition-all focus:border-teal-400 focus:text-teal-400;
+}
