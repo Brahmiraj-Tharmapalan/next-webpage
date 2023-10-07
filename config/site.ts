@@ -21,6 +21,10 @@ export const siteConfig = {
       href: "/services",
     },
     {
+      label: "Team",
+      href: "/team",
+    },
+    {
       label: "Contact",
       href: "/contact",
     },

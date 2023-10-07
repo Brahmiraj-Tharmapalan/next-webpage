@@ -1,3 +1,4 @@
+"use client";
 import {
   Navbar as NextUINavbar,
   NavbarContent,
@@ -15,7 +16,7 @@ import clsx from "clsx";
 import { ThemeSwitch } from "@/components/theme-switch";
 import { GithubIcon, LinkedInIcon } from "@/components/icons";
 import Logo from "@/public/logo.png";
-import Image from "next/image";
+import { Image } from "@nextui-org/react";
 
 export const Navbar = () => {
   return (
@@ -27,12 +28,11 @@ export const Navbar = () => {
             href="/"
           >
             <Image
-              src={Logo}
+              src={Logo.src}
               alt={"Logo"}
               width={60}
               height={0}
               sizes="100vw"
-              priority
             ></Image>
             <p className="font-bold text-inherit">Neuronic System</p>
           </NextLink>

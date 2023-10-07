@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { title } from "@/components/primitives";
-import Image from "next/image";
+import { Image } from "@nextui-org/react";
 import aboutImg from "@../../public/abt-us.jpg";
 import { TickIcon } from "@/components/icons";
 import { motion } from "framer-motion";
@@ -34,10 +34,9 @@ export default function AboutPage() {
         >
           <Image
             className=" justify-center rounded-xl"
-            src={aboutImg}
+            src={aboutImg.src}
             alt="hero-image"
             width={650}
-            priority
           />
         </motion.div>
         <div className="py-10 px-5 xl:w-1/2">
