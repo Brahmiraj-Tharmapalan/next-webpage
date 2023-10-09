@@ -4,6 +4,8 @@ import emailjs from "@emailjs/browser";
 import { useForm } from "react-hook-form";
 import { PhoneIcon, MapPinIcon, EnvelopeIcon } from "@heroicons/react/24/solid";
 import { title } from "@/components/primitives";
+import { Button } from "@nextui-org/react";
+import confetti from "canvas-confetti";
 const LightSpeed = require("react-reveal/LightSpeed");
 
 type Inputs = {
@@ -38,6 +40,10 @@ export default function ContactPage() {
     }
   };
 
+  const handleConfetti = () => {
+    confetti({ particleCount: 150, angle: 60, spread: 55, origin: { y: 1.2 } });
+  };
+
   return (
     <div className="flex flex-col">
       <div className="flex justify-center items-center">
@@ -47,55 +53,83 @@ export default function ContactPage() {
           </LightSpeed>
         </h1>
       </div>
-      <div>
+      <div className="flex max-lg:flex-col space-x-5 justify-between items-center max-md:px-3 px-20 mt-10">
         <div className="sm:space-y-10 space-y-1">
           <div className="flex items-center space-x-5 justify-center">
-            <PhoneIcon className="text-blue-700 sm:h-7 sm:w-7 w-4 h-4 animate-pulse" />
-            <p className="sm:text-2xl text-lg">+94775240043</p>
+            <a
+              href="https://wa.me/+94765266417"
+              target="_blank"
+              className="flex gap-5 justify-center items-center"
+            >
+              <PhoneIcon className="text-blue-700 sm:h-7 sm:w-7 w-4 h-4 animate-pulse" />
+              <p className="sm:text-2xl text-lg">+94 76 526 6417</p>
+            </a>
           </div>
           <div className="flex items-center space-x-5 justify-center">
-            <EnvelopeIcon className="text-blue-700 sm:h-7 sm:w-7 w-4 h-4 animate-pulse" />
-            <p className="sm:text-2xl text-lg">brahmirajt@gmail.com</p>
+            <a
+              href=""
+              target="_blank"
+              className="flex gap-5 justify-center items-center"
+            >
+              <EnvelopeIcon className="text-blue-700 sm:h-7 sm:w-7 w-4 h-4 animate-pulse" />
+              <p className="sm:text-2xl text-lg">info@neuronicsystem.com</p>
+            </a>
           </div>
           <div className="flex items-center space-x-5 justify-center">
-            <MapPinIcon className="text-blue-700 sm:h-7 sm:w-7 w-4 h-4 animate-pulse" />
-            <p className="sm:text-2xl text-lg">Batticaloa, srilanka, 30400</p>
+            <a
+              href="https://goo.gl/maps/2CwPs61FBHESQmsN6"
+              target="_blank"
+              className="flex gap-5 justify-center items-center"
+            >
+              <MapPinIcon className="text-blue-700 sm:h-7 sm:w-7 w-4 h-4 animate-pulse" />
+              <p className="sm:text-2xl text-lg">
+                176/27, Lower Road, Orr’s Hill, Trincomalee, Sri Lanka
+              </p>
+            </a>
           </div>
         </div>
-        <form
-          className="flex flex-col space-y-2 w-fit mx-auto"
-          onSubmit={handleSubmit(sendEmail)}
-          ref={formRef}
-        >
-          <div className="sm:flex in sm:space-x-2 space-x-0 space-y-2 sm:space-y-0">
+        <div className="max-lg:pt-10">
+          <form
+            className="flex flex-col space-y-2 w-fit mx-auto"
+            onSubmit={handleSubmit(sendEmail)}
+            ref={formRef}
+          >
+            <div className="sm:flex sm:space-x-2 space-x-0 space-y-2 sm:space-y-0">
+              <input
+                {...register("name", { required: true })}
+                placeholder="Name"
+                className="contactInput w-full"
+                type="text"
+              />
+              <input
+                {...register("email", { required: true })}
+                placeholder="Email"
+                className="contactInput w-full"
+                type="email"
+              />
+            </div>
             <input
-              {...register("name", { required: true })}
-              placeholder="Name"
+              {...register("subject", { required: true })}
+              placeholder="Subject"
               className="contactInput"
               type="text"
             />
-            <input
-              {...register("email", { required: true })}
-              placeholder="Email"
+            <textarea
+              {...register("message", { required: true })}
+              placeholder="Message"
               className="contactInput"
-              type="email"
             />
-          </div>
-          <input
-            {...register("subject", { required: true })}
-            placeholder="Subject"
-            className="contactInput"
-            type="text"
-          />
-          <textarea
-            {...register("message", { required: true })}
-            placeholder="Message"
-            className="contactInput"
-          />
-          <button className="buttonContact bg-teal-400" type="submit">
-            submit
-          </button>
-        </form>
+            <Button
+              disableRipple
+              className="dark:bg-blue-700 dark:hover:bg-blue-500 bg-blue-500 hover:bg-blue-700 text-xl font-bold text-white"
+              size="lg"
+              onPress={handleConfetti}
+              type="submit"
+            >
+              Submit
+            </Button>
+          </form>
+        </div>
       </div>
     </div>
   );
