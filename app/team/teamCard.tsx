@@ -7,7 +7,6 @@ import Link from "next/link";
 
 const variants = {
   hover: {
-    rotate: 360,
     scale: 0.8,
     y: -20,
   },

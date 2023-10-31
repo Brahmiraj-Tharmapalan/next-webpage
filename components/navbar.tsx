@@ -28,13 +28,13 @@ export const Navbar = () => {
             href="/"
           >
             <Image
+              className="rounded-none"
               src={Logo.src}
               alt={"Logo"}
-              width={60}
+              width={100}
               height={0}
               sizes="100vw"
             ></Image>
-            <p className="font-bold text-inherit">Neuronic System</p>
           </NextLink>
         </NavbarBrand>
         <ul className="hidden md:flex gap-4 justify-start ml-2">

@@ -55,7 +55,7 @@ export default function ContactPage() {
       </div>
       <div className="flex max-lg:flex-col space-x-5 justify-between items-center max-md:px-3 px-20 mt-10">
         <div className="sm:space-y-10 space-y-1">
-          <div className="flex items-center space-x-5 justify-center">
+          <div className="flex items-center space-x-5">
             <a
               href="https://wa.me/+94765266417"
               target="_blank"
@@ -65,7 +65,7 @@ export default function ContactPage() {
               <p className="sm:text-2xl text-lg">+94 76 526 6417</p>
             </a>
           </div>
-          <div className="flex items-center space-x-5 justify-center">
+          <div className="flex items-center space-x-5">
             <a
               href=""
               target="_blank"
@@ -75,7 +75,7 @@ export default function ContactPage() {
               <p className="sm:text-2xl text-lg">info@neuronicsystem.com</p>
             </a>
           </div>
-          <div className="flex items-center space-x-5 justify-center">
+          <div className="flex items-center space-x-5">
             <a
               href="https://goo.gl/maps/2CwPs61FBHESQmsN6"
               target="_blank"

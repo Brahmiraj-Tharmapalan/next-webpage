@@ -41,9 +41,9 @@ export default function AboutPage() {
         </motion.div>
         <div className="py-10 px-5 xl:w-1/2">
           <h1 className="text-4xl font-bold py-5 ">
-            <Bounce right cascade delay={2000}>
+            <LightSpeed right delay={2000}>
               We Make Your Business Smarter with Artificial Intelligence
-            </Bounce>
+            </LightSpeed>
           </h1>
           <motion.div
             initial={{
@@ -51,7 +51,7 @@ export default function AboutPage() {
               opacity: 0,
             }}
             transition={{
-              delay: 3.5,
+              delay: 2.8,
               duration: 1.2,
             }}
             whileInView={{ opacity: 1, x: 0 }}
