@@ -74,53 +74,6 @@ export default function AboutPage() {
               clients to achieve remarkable outcomes.
             </p>
           </motion.div>
-          {/* Services List */}
-          <ul className="flex flex-col xl:flex-row">
-            <div className="xl:pt-5 pr-9">
-              <li className="flex items-center space-x-3">
-                <Zoom delay={4000}>
-                  <TickIcon className="text-default-500" />
-                </Zoom>
-                <Bounce bottom delay={4500}>
-                  <span className="font-semibold pt-1 pr-5">AI Solutions</span>
-                </Bounce>
-              </li>
-              <li className="flex items-center space-x-3">
-                <Zoom delay={5000}>
-                  <TickIcon className="text-default-500" />
-                </Zoom>
-                <span className="font-semibold pt-1 pr-5">
-                  <Bounce bottom delay={5500}>
-                    Web Application Development
-                  </Bounce>
-                </span>
-              </li>
-            </div>
-
-            <div className="xl:pt-5 pr-9">
-              <li className="flex items-center space-x-3">
-                <Zoom delay={6000}>
-                  <TickIcon className="text-default-500" />
-                </Zoom>
-
-                <span className="font-semibold pt-1 pr-5">
-                  <Bounce bottom delay={6500}>
-                    Embedded & IoT Solutions
-                  </Bounce>
-                </span>
-              </li>
-              <li className="flex items-center space-x-3">
-                <Zoom delay={7000}>
-                  <TickIcon className="text-default-500" />
-                </Zoom>
-                <span className="font-semibold pt-1 pr-5">
-                  <Bounce bottom delay={7500}>
-                    Mobile Application Development
-                  </Bounce>
-                </span>
-              </li>
-            </div>
-          </ul>
         </div>
       </div>
     </div>
