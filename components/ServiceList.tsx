@@ -32,11 +32,11 @@ const ServiceList: React.FC<ServiceListProps> = ({
             <div className="absolute inset-0 h-full w-full rounded-xl bg-black/80 px-12 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden]">
               <div className="flex min-h-full flex-col items-center justify-center">
                 <p className="text-base">{description}</p>
-                <Link href={url}>
+                {/* <Link href={url}>
                   <button className="mt-2 rounded-md bg-neutral-800 py-1 px-2 text-sm hover:bg-neutral-900">
                     Read More
                   </button>
-                </Link>
+                </Link> */}
               </div>
             </div>
           </div>

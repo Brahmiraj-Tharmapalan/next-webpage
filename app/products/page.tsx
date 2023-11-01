@@ -42,12 +42,12 @@ export default function ProductsPage() {
               connectivity across various industries.
             </p>
 
-            <a
+            {/* <a
               className="border-2  border-blue-500 rounded-lg hover:bg-blue-300  w-fit px-4 mt-4"
               href=""
             >
               Read More
-            </a>
+            </a> */}
           </motion.div>
         </div>
         <div className="flex-1 w-2/3 max-md:w-full p-5">
